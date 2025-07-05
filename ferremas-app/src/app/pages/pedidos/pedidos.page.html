@@ -1,0 +1,19 @@
+<ion-content>
+  <div *ngIf="cargando" class="spinner-center">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
+  <ion-list *ngIf="!cargando && pedidos.length > 0">
+    <ion-item *ngFor="let pedido of pedidos">
+      <ion-label>
+        <h3>Pedido #{{ pedido.id }}</h3>
+        <p>Estado: {{ pedido.estado }}</p>
+        <p>Total: ${{ pedido.total | number:'1.0-0' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!cargando && pedidos.length === 0" class="mensaje-vacio">
+    No tienes pedidos realizados.
+  </div>
+</ion-content>

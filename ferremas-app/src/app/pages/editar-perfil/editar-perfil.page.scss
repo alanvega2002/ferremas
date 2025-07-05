@@ -1,0 +1,23 @@
+.contenido-perfil {
+  background-color: #f4f4f4;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .spinner-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  .mensaje {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #4CAF50;
+  }
+}

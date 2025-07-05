@@ -1,0 +1,65 @@
+<ion-content class="login-bg">
+  <!-- 🔰 Navbar simplificado para login -->
+<nav class="navbar-login">
+  <div class="navbar-logo" (click)="irAlHome()">
+    <i class="bi bi-scissors"></i>
+    <span>FERREMAS</span>
+  </div>
+</nav>
+
+  <div class="login-wrapper">
+    <!-- 📦 Cápsula principal -->
+    <div class="login-card">
+
+      <!-- 🟢 Título dividido en líneas -->
+      <h1 class="login-title">
+        Bienvenido <br />
+        a <br />
+        <span class="verde">FERREMAS</span>
+      </h1>
+
+      <!-- ⚠️ Mensaje de error si existe -->
+      <div *ngIf="mensajeError" class="mensaje-error">
+        {{ mensajeError }}
+      </div>
+
+      <!-- 📨 Campo Correo con etiqueta arriba -->
+      <div class="input-group">
+        <label for="correo">Correo electrónico</label>
+        <ion-input
+          id="correo"
+          type="email"
+          placeholder="ejemplo@correo.com"
+          [(ngModel)]="correo"
+          class="login-input"
+          fill="solid">
+        </ion-input>
+      </div>
+
+      <!-- 🔒 Campo Clave con etiqueta arriba -->
+      <div class="input-group">
+        <label for="clave">Contraseña</label>
+        <ion-input
+          id="clave"
+          type="password"
+          placeholder="Tu contraseña"
+          [(ngModel)]="clave"
+          class="login-input"
+          fill="solid">
+        </ion-input>
+      </div>
+
+      <!-- 🔘 Botón iniciar sesión -->
+      <ion-button expand="block" color="success" (click)="login()">
+        Iniciar sesión
+      </ion-button>
+
+      <!-- 🆕 Enlace para registro -->
+      <div class="registro-link">
+        ¿No tienes cuenta?
+        <a routerLink="/crear-cliente">Regístrate</a>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

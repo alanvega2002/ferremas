@@ -1,0 +1,95 @@
+<ion-content class="registro-bg">
+  <!-- 🔰 Navbar simplificado -->
+  <nav class="navbar-login">
+    <div class="navbar-logo" (click)="irAlHome()">
+      <i class="bi bi-scissors"></i>
+      <span>FERREMAS</span>
+    </div>
+  </nav>
+
+  <div class="registro-wrapper">
+    <div class="registro-card">
+      <!-- 🏷️ Título -->
+      <h1 class="registro-title">
+        Crear cuenta <br />
+        en <span class="verde">FERREMAS</span>
+      </h1>
+
+      <!-- 📢 Mensaje de error -->
+      <div *ngIf="mensajeError" class="error-box">
+        {{ mensajeError }}
+      </div>
+
+      <!-- ✅ Campo RUT -->
+      <ion-label class="registro-label">RUT</ion-label>
+      <ion-input
+        class="registro-input"
+        [(ngModel)]="cliente.rut"
+        placeholder="Ej: 12.345.678-9">
+      </ion-input>
+
+      <!-- ✅ Campo Nombre -->
+      <ion-label class="registro-label">Nombre</ion-label>
+      <ion-input
+        class="registro-input"
+        [(ngModel)]="cliente.nombre"
+        placeholder="Tu nombre">
+      </ion-input>
+
+      <!-- ✅ Campo Apellido -->
+      <ion-label class="registro-label">Apellido</ion-label>
+      <ion-input
+        class="registro-input"
+        [(ngModel)]="cliente.apellido"
+        placeholder="Tu apellido">
+      </ion-input>
+
+      <!-- ✅ Campo Correo -->
+      <ion-label class="registro-label">Correo electrónico</ion-label>
+      <ion-input
+        class="registro-input"
+        [(ngModel)]="cliente.email"
+        type="email"
+        placeholder="correo@ejemplo.com">
+      </ion-input>
+
+      <!-- ✅ Campo Teléfono -->
+      <ion-label class="registro-label">Teléfono</ion-label>
+      <ion-input
+        class="registro-input"
+        [(ngModel)]="cliente.telefono"
+        type="tel"
+        placeholder="+56 9 1234 5678">
+      </ion-input>
+
+      <!-- ✅ Campo Contraseña -->
+      <ion-label class="registro-label">Contraseña</ion-label>
+      <ion-input
+        class="registro-input"
+        [(ngModel)]="cliente.password"
+        type="password"
+        placeholder="Crea una contraseña">
+      </ion-input>
+
+      <!-- ✅ Confirmar contraseña -->
+      <ion-label class="registro-label">Confirmar contraseña</ion-label>
+      <ion-input
+        class="registro-input"
+        [(ngModel)]="cliente.confirmarPassword"
+        type="password"
+        placeholder="Repite la contraseña">
+      </ion-input>
+
+      <!-- 🔘 Botón Registrar -->
+      <ion-button expand="block" color="success" (click)="registrarCliente()">
+        Registrarse
+      </ion-button>
+
+      <!-- 🔁 Volver a login -->
+      <div class="volver-login">
+        ¿Ya tienes cuenta?
+        <a routerLink="/login" class="volver-link">Inicia sesión</a>
+      </div>
+    </div>
+  </div>
+</ion-content>

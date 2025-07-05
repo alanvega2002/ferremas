@@ -1,0 +1,148 @@
+/* =============================== */
+/* 🎨 FONDO GENERAL DE LA VISTA    */
+/* =============================== */
+
+.registro-bg {
+  --background: #2d2d2d !important;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100%;
+  padding-top: 1rem;
+}
+
+/* =============================== */
+/* 📦 CONTENEDOR FLEX DEL FORMULARIO */
+/* =============================== */
+
+.registro-wrapper {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* =============================== */
+/* 🧾 TARJETA DEL FORMULARIO       */
+/* =============================== */
+
+.registro-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* =============================== */
+/* 🏷️ TÍTULOS Y TEXTOS             */
+/* =============================== */
+
+.registro-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #263238;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.verde {
+  color: #4CAF50;
+}
+
+/* =============================== */
+/* 📝 LABELS E INPUTS              */
+/* =============================== */
+
+.registro-label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: -0.3rem;
+  font-size: 0.9rem;
+}
+
+.registro-input {
+  --background: #f1f1f1;
+  --color: #000000;
+  --placeholder-color: #777;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: none;
+}
+
+/* =============================== */
+/* 🔁 LINK DE REGRESO AL LOGIN     */
+/* =============================== */
+
+.volver-login {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.volver-link {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+
+.volver-link:hover {
+  text-decoration: underline;
+}
+
+/* =============================== */
+/* ⚠️ MENSAJE DE ERROR VISIBLE     */
+/* =============================== */
+
+.error-box {
+  background-color: #ffe0b2;
+  color: #bf360c !important;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+/* =============================== */
+/* 🔰 NAVBAR SIMPLIFICADO          */
+/* =============================== */
+
+.navbar-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c2c2c;
+  color: white;
+  padding: 0.75rem;
+  border-bottom: 3px solid #4CAF50;
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+}
