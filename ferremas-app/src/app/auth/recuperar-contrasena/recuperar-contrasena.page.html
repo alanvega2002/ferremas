@@ -1,13 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>recuperar-contrasena</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="fondo-claro">
+  <div class="contenedor-recuperar">
+    <ion-card class="tarjeta-sombra">
+      <ion-card-header>
+        <ion-card-title>🔒 Recuperar Contraseña</ion-card-title>
+        <ion-card-subtitle>Ingresa tu correo electrónico</ion-card-subtitle>
+      </ion-card-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">recuperar-contrasena</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-card-content>
+        <form (ngSubmit)="recuperar()">
+          <!-- Campo de correo electrónico -->
+          <ion-item>
+            <ion-icon name="mail-outline" slot="start"></ion-icon>
+            <ion-input
+              type="email"
+              label="Correo"
+              labelPlacement="floating"
+              placeholder="ejemplo@correo.com"
+              [(ngModel)]="correo"
+              name="correo"
+              required
+            ></ion-input>
+          </ion-item>
+
+          <!-- Botón de enviar -->
+          <ion-button expand="block" color="success" type="submit" class="mt-3">
+            Enviar enlace
+          </ion-button>
+        </form>
+
+        <!-- Mensaje de éxito o error -->
+        <div *ngIf="mensaje" class="mensaje">
+          {{ mensaje }}
+        </div>
+
+        <!-- Enlace para volver -->
+        <div class="volver-login">
+          <a routerLink="/login">
+            ← Volver al inicio de sesión
+          </a>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

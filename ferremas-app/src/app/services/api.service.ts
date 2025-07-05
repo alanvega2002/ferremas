@@ -121,6 +121,15 @@ export class ApiService {
   /** ✅ Login con email y contraseña */
   login(credenciales: any): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/auth/login`, credenciales);
-  }
+  }/**
+ * ✅ Enviar solicitud de recuperación de contraseña
+ * POST /api/Auth/recuperar-contrasena
+ * @param correo El correo electrónico del usuario
+ * @returns Observable con el resultado de la solicitud
+ */
+recuperarContrasena(correo: string): Observable<any> {
+  const payload = { correo }; // se espera un JSON con el correo
+  return this.http.post(`${this.baseUrl}/Auth/recuperar-contrasena`, payload);
+}
 
 }

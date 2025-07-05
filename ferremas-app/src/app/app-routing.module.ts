@@ -62,106 +62,106 @@ const routes: Routes = [
     loadComponent: () => import('./pages/crear-cliente/crear-cliente.page').then(m => m.CrearClientePage)
   },
   {
-    path: 'recuperar-contrasena',
-    loadChildren: () => import('./auth/recuperar-contrasena/recuperar-contrasena.module').then( m => m.RecuperarContrasenaPageModule)
+  path: 'recuperar-contrasena',
+  loadComponent: () => import('./auth/recuperar-contrasena/recuperar-contrasena.page').then(m => m.RecuperarContrasenaPage)
   },
   {
     path: 'cambiar-contrasena',
-    loadChildren: () => import('./auth/cambiar-contrasena/cambiar-contrasena.module').then( m => m.CambiarContrasenaPageModule)
+    loadComponent: () => import('./auth/cambiar-contrasena/cambiar-contrasena.page').then(m => m.CambiarContrasenaPage)
   },
   {
     path: 'usuarios',
-    loadChildren: () => import('./admin/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+    loadComponent: () => import('./admin/usuarios/usuarios.page').then(m => m.UsuariosPage)
   },
   {
     path: 'usuario-detalle',
-    loadChildren: () => import('./admin/usuario-detalle/usuario-detalle.module').then( m => m.UsuarioDetallePageModule)
+    loadComponent: () => import('./admin/usuario-detalle/usuario-detalle.page').then(m => m.UsuarioDetallePage)
   },
   {
     path: 'vendedores',
-    loadChildren: () => import('./admin/vendedores/vendedores.module').then( m => m.VendedoresPageModule)
+    loadComponent: () => import('./admin/vendedores/vendedores.page').then(m => m.VendedoresPage)
   },
   {
     path: 'bodegueros',
-    loadChildren: () => import('./admin/bodegueros/bodegueros.module').then( m => m.BodeguerosPageModule)
+    loadComponent: () => import('./admin/bodegueros/bodegueros.page').then(m => m.BodeguerosPage)
   },
   {
     path: 'contadores',
-    loadChildren: () => import('./admin/contadores/contadores.module').then( m => m.ContadoresPageModule)
+    loadComponent: () => import('./admin/contadores/contadores.page').then(m => m.ContadoresPage)
   },
   {
-    path: 'listado',
-    loadChildren: () => import('./categorias/listado/listado.module').then( m => m.ListadoPageModule)
+    path: 'listado-categorias',
+    loadComponent: () => import('./categorias/listado/listado.page').then(m => m.ListadoPage)
   },
   {
-    path: 'formulario',
-    loadChildren: () => import('./categorias/formulario/formulario.module').then( m => m.FormularioPageModule)
+    path: 'formulario-categorias',
+    loadComponent: () => import('./categorias/formulario/formulario.page').then(m => m.FormularioPage)
   },
   {
-    path: 'listado',
-    loadChildren: () => import('./marcas/listado/listado.module').then( m => m.ListadoPageModule)
+    path: 'listado-marcas',
+    loadComponent: () => import('./marcas/listado/listado.page').then(m => m.ListadoPage)
   },
   {
-    path: 'confirmacion',
-    loadChildren: () => import('./carrito/confirmacion/confirmacion.module').then( m => m.ConfirmacionPageModule)
+    path: 'confirmacion-carrito',
+    loadComponent: () => import('./carrito/confirmacion/confirmacion.page').then(m => m.ConfirmacionPage)
   },
   {
-    path: 'crear',
-    loadChildren: () => import('./pedidos/crear/crear.module').then( m => m.CrearPageModule)
+    path: 'crear-pedido',
+    loadComponent: () => import('./pedidos/crear/crear.page').then(m => m.CrearPage)
   },
   {
     path: 'inventario',
-    loadChildren: () => import('./bodeguero/inventario/inventario.module').then( m => m.InventarioPageModule)
+    loadComponent: () => import('./bodeguero/inventario/inventario.page').then(m => m.InventarioPage)
   },
   {
-    path: 'pedidos',
-    loadChildren: () => import('./bodeguero/pedidos/pedidos.module').then( m => m.PedidosPageModule)
+    path: 'pedidos-bodega',
+    loadComponent: () => import('./bodeguero/pedidos/pedidos.page').then(m => m.PedidosPage)
   },
   {
-    path: 'pedido-detalle',
-    loadChildren: () => import('./bodeguero/pedido-detalle/pedido-detalle.module').then( m => m.PedidoDetallePageModule)
+    path: 'pedido-detalle-bodega',
+    loadComponent: () => import('./bodeguero/pedido-detalle/pedido-detalle.page').then(m => m.PedidoDetallePage)
   },
   {
     path: 'actualizar-producto',
-    loadChildren: () => import('./bodeguero/actualizar-producto/actualizar-producto.module').then( m => m.ActualizarProductoPageModule)
+    loadComponent: () => import('./bodeguero/actualizar-producto/actualizar-producto.page').then(m => m.ActualizarProductoPage)
   },
   {
     path: 'pagos-pendientes',
-    loadChildren: () => import('./contador/pagos-pendientes/pagos-pendientes.module').then( m => m.PagosPendientesPageModule)
+    loadComponent: () => import('./contador/pagos-pendientes/pagos-pendientes.page').then(m => m.PagosPendientesPage)
   },
   {
-    path: 'historial',
-    loadChildren: () => import('./contador/historial/historial.module').then( m => m.HistorialPageModule)
+    path: 'historial-pagos',
+    loadComponent: () => import('./contador/historial/historial.page').then(m => m.HistorialPage)
   },
   {
     path: 'detalle-pago',
-    loadChildren: () => import('./contador/detalle-pago/detalle-pago.module').then( m => m.DetallePagoPageModule)
+    loadComponent: () => import('./contador/detalle-pago/detalle-pago.page').then(m => m.DetallePagoPage)
   },
   {
     path: 'transferencia',
-    loadChildren: () => import('./pagos/transferencia/transferencia.module').then( m => m.TransferenciaPageModule)
+    loadComponent: () => import('./pagos/transferencia/transferencia.page').then(m => m.TransferenciaPage)
   },
   {
-    path: 'confirmacion',
-    loadChildren: () => import('./pagos/confirmacion/confirmacion.module').then( m => m.ConfirmacionPageModule)
+    path: 'confirmacion-pago',
+    loadComponent: () => import('./pagos/confirmacion/confirmacion.page').then(m => m.ConfirmacionPage)
   },
   {
-    path: 'clientes',
-    loadChildren: () => import('./vendedor/clientes/clientes.module').then( m => m.ClientesPageModule)
+    path: 'clientes-vendedor',
+    loadComponent: () => import('./vendedor/clientes/clientes.page').then(m => m.ClientesPage)
   },
   {
-    path: 'pedidos',
-    loadChildren: () => import('./vendedor/pedidos/pedidos.module').then( m => m.PedidosPageModule)
+    path: 'pedidos-vendedor',
+    loadComponent: () => import('./vendedor/pedidos/pedidos.page').then(m => m.PedidosPage)
   },
   {
-    path: 'pedido-detalle',
-    loadChildren: () => import('./vendedor/pedido-detalle/pedido-detalle.module').then( m => m.PedidoDetallePageModule)
+    path: 'pedido-detalle-vendedor',
+    loadComponent: () => import('./vendedor/pedido-detalle/pedido-detalle.page').then(m => m.PedidoDetallePage)
   },
   {
     path: 'crear-pedido-bodega',
-    loadChildren: () => import('./vendedor/crear-pedido-bodega/crear-pedido-bodega.module').then( m => m.CrearPedidoBodegaPageModule)
-  },
-  
+    loadComponent: () => import('./vendedor/crear-pedido-bodega/crear-pedido-bodega.page').then(m => m.CrearPedidoBodegaPage)
+  }
+
 ];
 
 @NgModule({
